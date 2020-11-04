@@ -1,0 +1,14 @@
+<h1>Venues#index</h1>
+<p>Find me in app/views/venues/index.html.erb</p>
+<% @venues.each do |venue| %>
+  <div>
+    <%= venue.address_line_one %><br>
+    <%= venue.address_line_two %><br>
+    <%= venue.town %><br>
+    <%= venue.county %><br>
+    <%= venue.postcode %><br>
+  </div>
+<% end %>
+
+
+<%= link_to "Add a venue", new_venue_path %>

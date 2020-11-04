@@ -1,0 +1,18 @@
+<h1>Venues#new</h1>
+<p>Find me in app/views/venues/new.html.erb</p>
+
+
+
+<%= form_with model: @venue do |f| %>
+  <%= label_tag(:address_line_one, "Address Line One") %>
+  <%= f.text_field :address_line_one %>
+  <%= label_tag(:address_line_two, "Address Line Two") %>
+  <%= f.text_field :address_line_two %>
+  <%= label_tag(:town, "Town") %>
+  <%= f.text_field :town %>
+  <%= label_tag(:county, "county") %>
+  <%= f.text_field :county %>
+  <%= label_tag(:postcode, "postcode") %>
+  <%= f.text_field :postcode %>
+  <%= f.submit "Add Venue" %>
+<% end %>
