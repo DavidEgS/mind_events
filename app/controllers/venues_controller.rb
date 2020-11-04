@@ -13,15 +13,14 @@ class VenuesController < ApplicationController
   end
 
   def create
-    @venue = Venue.new(params[:venue_params])
-    @venue.save
+    @venue = Venue.new(venue_params)
     authorize @venue
+
     if @venue.save
       redirect_to venue_path(@venue)
     else
       render :new
     end
-
   end
 
   def edit
@@ -29,7 +28,7 @@ class VenuesController < ApplicationController
   end
 
   def update
-    @venue.update(params[:venue_params])
+    @venue.update(venue_params)
     authorize @venue
   end
 
