@@ -11,13 +11,12 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-    @venue_options = Venue.all.map{ |v| [v.address_one, v.id] }
+    @venue_options = Venue.all.map { |v| [v.name, v.id] }
     authorize @event
   end
 
   def create
-    date = params[:date].to_datetime
-    @event = Event.new(date: date)
+    @event = Event.new(event_params)
     if @event.save
       redirect_to events_path
     else
@@ -31,7 +30,7 @@ class EventsController < ApplicationController
   end
 
   def update
-    @event.update(params[event_params])
+    @event.update(event_params)
     authorize @event
   end
 
