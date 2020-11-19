@@ -1,11 +1,11 @@
-class PagesPolicy < ApplicationPolicy
+class EventUserPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
 
-  def home?
+  def create?
     true
   end
 end

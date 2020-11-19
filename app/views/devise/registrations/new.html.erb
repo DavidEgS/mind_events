@@ -7,7 +7,10 @@
           <%= f.error_notification %>
 
           <div class="form-inputs">
-            <div id="dpn" class="checker">
+
+            <%= f.label :dpn, "Privacy Agreement" %>
+            <p>To attend this event you must agree to our privacy terms</p>
+            <div class="checker">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec odio ipsum. Vestibulum eu blandit elit, commodo egestas erat. Vivamus quis cursus odio. Nunc elementum non sapien non vulputate. In hac habitasse platea dictumst. Quisque hendrerit erat diam. Morbi a ipsum ipsum. Aliquam in pharetra quam, et lacinia lorem. Integer in est hendrerit, tristique risus vel, facilisis ante. Sed porttitor orci vitae pharetra ullamcorper.
 
         Mauris porta eget quam in pretium. Donec pretium eros quis sapien venenatis rhoncus. Integer vehicula ultrices ante id tempor. Ut ullamcorper lacus nec arcu vehicula dignissim. Nunc efficitur metus elit, in pellentesque turpis aliquam in. Cras non placerat enim. Duis dictum sapien eget felis aliquet suscipit. Praesent in diam id ligula aliquam consequat. Fusce commodo imperdiet lectus id eleifend. Maecenas eget metus quis erat feugiat posuere. Nullam a sem eget nulla vehicula semper consectetur ac felis. Integer est mauris, tempor ut nunc ac, consectetur pretium dui. Fusce justo sem, tempus eu pretium eget, faucibus et lorem.
@@ -19,36 +22,41 @@
         Nam vestibulum a sapien placerat dapibus. Maecenas pulvinar ipsum urna, aliquam viverra felis lobortis eget. Aliquam hendrerit urna ultrices, placerat elit eu, vulputate ipsum. Donec gravida nibh et orci vestibulum facilisis. Vivamus a finibus purus. Curabitur volutpat dignissim erat, at lobortis neque vestibulum ac. Nullam vel lacus vitae tellus cursus aliquet eu id ante. Pellentesque scelerisque interdum aliquet. Phasellus ut enim volutpat ante tempor finibus lacinia sed orci. Vivamus dapibus sit amet enim sed ornare. Morbi id condimentum sapien, vitae molestie tortor. Donec molestie eros at ligula mattis eleifend. Duis tristique, tellus nec luctus dignissim, eros tortor sollicitudin sem, eget semper lacus sem ornare nisl. Morbi a erat erat. Phasellus sit amet quam lacus.
 
             </div>
-            <%= f.input :dpn  %>
-                <div id="coc" class="checker">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec odio ipsum. Vestibulum eu blandit elit, commodo egestas erat. Vivamus quis cursus odio. Nunc elementum non sapien non vulputate. In hac habitasse platea dictumst. Quisque hendrerit erat diam. Morbi a ipsum ipsum. Aliquam in pharetra quam, et lacinia lorem. Integer in est hendrerit, tristique risus vel, facilisis ante. Sed porttitor orci vitae pharetra ullamcorper.
+            <%= f.input :dpn %>
+            <div id="coc" class="closed">
+              <%= f.label :coc, "Code of Conduct "%>
+              <p>To attend this event you must agree to our Code of Conduct</p>
+              <div class="checker">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec odio ipsum. Vestibulum eu blandit elit, commodo egestas erat. Vivamus quis cursus odio. Nunc elementum non sapien non vulputate. In hac habitasse platea dictumst. Quisque hendrerit erat diam. Morbi a ipsum ipsum. Aliquam in pharetra quam, et lacinia lorem. Integer in est hendrerit, tristique risus vel, facilisis ante. Sed porttitor orci vitae pharetra ullamcorper.
 
-        Mauris porta eget quam in pretium. Donec pretium eros quis sapien venenatis rhoncus. Integer vehicula ultrices ante id tempor. Ut ullamcorper lacus nec arcu vehicula dignissim. Nunc efficitur metus elit, in pellentesque turpis aliquam in. Cras non placerat enim. Duis dictum sapien eget felis aliquet suscipit. Praesent in diam id ligula aliquam consequat. Fusce commodo imperdiet lectus id eleifend. Maecenas eget metus quis erat feugiat posuere. Nullam a sem eget nulla vehicula semper consectetur ac felis. Integer est mauris, tempor ut nunc ac, consectetur pretium dui. Fusce justo sem, tempus eu pretium eget, faucibus et lorem.
+          Mauris porta eget quam in pretium. Donec pretium eros quis sapien venenatis rhoncus. Integer vehicula ultrices ante id tempor. Ut ullamcorper lacus nec arcu vehicula dignissim. Nunc efficitur metus elit, in pellentesque turpis aliquam in. Cras non placerat enim. Duis dictum sapien eget felis aliquet suscipit. Praesent in diam id ligula aliquam consequat. Fusce commodo imperdiet lectus id eleifend. Maecenas eget metus quis erat feugiat posuere. Nullam a sem eget nulla vehicula semper consectetur ac felis. Integer est mauris, tempor ut nunc ac, consectetur pretium dui. Fusce justo sem, tempus eu pretium eget, faucibus et lorem.
 
-        Mauris et est pretium, dignissim orci quis, commodo eros. Proin vel aliquam nisl, sit amet dictum tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In sed erat a neque sodales cursus. Maecenas semper, nulla eget rhoncus tristique, nisi sem bibendum leo, a sollicitudin elit felis eget diam. Suspendisse nec scelerisque purus, vitae porta eros. In pellentesque suscipit metus et volutpat. Cras sagittis vehicula ante non laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non libero suscipit libero accumsan maximus quis id ligula.
+          Mauris et est pretium, dignissim orci quis, commodo eros. Proin vel aliquam nisl, sit amet dictum tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In sed erat a neque sodales cursus. Maecenas semper, nulla eget rhoncus tristique, nisi sem bibendum leo, a sollicitudin elit felis eget diam. Suspendisse nec scelerisque purus, vitae porta eros. In pellentesque suscipit metus et volutpat. Cras sagittis vehicula ante non laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non libero suscipit libero accumsan maximus quis id ligula.
 
-        Pellentesque finibus, urna bibendum molestie eleifend, ligula augue volutpat quam, quis ullamcorper elit sem at dolor. Maecenas a fermentum nisi. Duis ut dui a justo luctus mollis. Integer nunc justo, tincidunt sed cursus vitae, eleifend sit amet ipsum. Aenean consequat at massa ut molestie. Integer eget justo lacus. Nam tristique nisi dapibus sem fringilla sodales. Nam at imperdiet diam. Sed ultrices, eros eget lobortis ullamcorper, lectus nibh mattis ex, at interdum est lacus id ligula. Curabitur commodo libero vel nunc malesuada rutrum. Proin enim purus, eleifend sed felis vitae, mollis porta nibh. Integer sed justo a magna malesuada blandit. In hendrerit ligula id urna malesuada, sed sagittis enim laoreet. Nam id lorem blandit, facilisis nulla eu, dignissim nisl. Duis tempor nibh in erat interdum laoreet.
+          Pellentesque finibus, urna bibendum molestie eleifend, ligula augue volutpat quam, quis ullamcorper elit sem at dolor. Maecenas a fermentum nisi. Duis ut dui a justo luctus mollis. Integer nunc justo, tincidunt sed cursus vitae, eleifend sit amet ipsum. Aenean consequat at massa ut molestie. Integer eget justo lacus. Nam tristique nisi dapibus sem fringilla sodales. Nam at imperdiet diam. Sed ultrices, eros eget lobortis ullamcorper, lectus nibh mattis ex, at interdum est lacus id ligula. Curabitur commodo libero vel nunc malesuada rutrum. Proin enim purus, eleifend sed felis vitae, mollis porta nibh. Integer sed justo a magna malesuada blandit. In hendrerit ligula id urna malesuada, sed sagittis enim laoreet. Nam id lorem blandit, facilisis nulla eu, dignissim nisl. Duis tempor nibh in erat interdum laoreet.
 
-        Nam vestibulum a sapien placerat dapibus. Maecenas pulvinar ipsum urna, aliquam viverra felis lobortis eget. Aliquam hendrerit urna ultrices, placerat elit eu, vulputate ipsum. Donec gravida nibh et orci vestibulum facilisis. Vivamus a finibus purus. Curabitur volutpat dignissim erat, at lobortis neque vestibulum ac. Nullam vel lacus vitae tellus cursus aliquet eu id ante. Pellentesque scelerisque interdum aliquet. Phasellus ut enim volutpat ante tempor finibus lacinia sed orci. Vivamus dapibus sit amet enim sed ornare. Morbi id condimentum sapien, vitae molestie tortor. Donec molestie eros at ligula mattis eleifend. Duis tristique, tellus nec luctus dignissim, eros tortor sollicitudin sem, eget semper lacus sem ornare nisl. Morbi a erat erat. Phasellus sit amet quam lacus.
+          Nam vestibulum a sapien placerat dapibus. Maecenas pulvinar ipsum urna, aliquam viverra felis lobortis eget. Aliquam hendrerit urna ultrices, placerat elit eu, vulputate ipsum. Donec gravida nibh et orci vestibulum facilisis. Vivamus a finibus purus. Curabitur volutpat dignissim erat, at lobortis neque vestibulum ac. Nullam vel lacus vitae tellus cursus aliquet eu id ante. Pellentesque scelerisque interdum aliquet. Phasellus ut enim volutpat ante tempor finibus lacinia sed orci. Vivamus dapibus sit amet enim sed ornare. Morbi id condimentum sapien, vitae molestie tortor. Donec molestie eros at ligula mattis eleifend. Duis tristique, tellus nec luctus dignissim, eros tortor sollicitudin sem, eget semper lacus sem ornare nisl. Morbi a erat erat. Phasellus sit amet quam lacus.
 
             </div>
-            <%= f.input :coc  %>
-            <%= f.input :email,
-                        required: true,
-                        autofocus: true,
-                        input_html: { autocomplete: "email" }%>
-            <%= f.input :password,
-                        required: true,
-                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                        input_html: { autocomplete: "new-password" } %>
-            <%= f.input :password_confirmation,
-                        required: true,
-                        input_html: { autocomplete: "new-password" } %>
-            <%= f.input :name  %>
-            <%= f.input :surname  %>
-            <%= f.input :phone_number  %>
-            <%= f.input :postcode  %>
-
+              <%= f.input :coc  %>
+            </div>
+            <div id="pds" class="closed">
+              <p>Personal details</p>
+              <%= f.input :email,
+                          required: true,
+                          input_html: { autocomplete: "email" }%>
+              <%= f.input :password,
+                          required: true,
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                          input_html: { autocomplete: "new-password" } %>
+              <%= f.input :password_confirmation,
+                          required: true,
+                          input_html: { autocomplete: "new-password" } %>
+              <%= f.input :name  %>
+              <%= f.input :surname  %>
+              <%= f.input :phone_number  %>
+              <%= f.input :postcode  %>
+            </div>
           </div>
 
           <div class="form-actions">
