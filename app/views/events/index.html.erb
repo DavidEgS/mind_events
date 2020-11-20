@@ -5,5 +5,7 @@
 
 
 <% @events.each do |event| %>
-  <p> <%= event.venue.name %> - <%= event.date %> </p>
+  <%= link_to event_path(event) %>
+    <p> <%= event.venue.name %> - <%= event.date %> </p>
+  <% end %>
 <% end %>
