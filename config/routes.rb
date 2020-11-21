@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     resources :event_users, only: [:new, :create]
   end
 
+  resources :reports, only: [:show]
+
   resources :venues
 end
