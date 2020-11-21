@@ -1,25 +1,26 @@
+const reloadedChecks = () => {
+
+}
+
 const checkerChanger = () => {
   const dpn = document.getElementById("user_dpn");
-  const tester = () => {
-    console.log("hello");
-  }
+  const cocBox = document.getElementById("coc");
+  const userCoc = document.getElementById("user_coc");
+  const pds = document.getElementById("pds");
+
+
   if (dpn) {
-    dpn.addEventListener("click", tester)
+    dpn.addEventListener("click", () => {
+      cocBox.classList.toggle('closed')
+    })
+  }
+
+  if (userCoc) {
+    userCoc.addEventListener("click", () => {
+      pds.classList.toggle('closed')
+    })
   }
 }
 
 
-// const initUpdateNavbarOnScroll = () => {
-//   const navbar = document.querySelector('.navbar-lewagon');
-//   if (navbar) {
-//     window.addEventListener('scroll', () => {
-//       if (window.scrollY >= window.innerHeight) {
-//         navbar.classList.add('navbar-lewagon-white');
-//       } else {
-//         navbar.classList.remove('navbar-lewagon-white');
-//       }
-//     });
-//   }
-// }
-
-export { checkerChanger };
+export { checkerChanger,  };

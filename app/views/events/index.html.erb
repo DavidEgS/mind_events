@@ -1,9 +1,3 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
-<%= link_to "Add an event", new_event_path %>
-<%= link_to "Add a venue", new_venue_path %>
-
-
 <% @events.each do |event| %>
   <%= link_to event_path(event) do %>
     <p> <%= event.venue.name %> - <%= event.date %> </p>

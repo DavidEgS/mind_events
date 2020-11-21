@@ -4,3 +4,5 @@
   <%= @venue.name %>
 
 </p>
+
+<%= link_to "edit this venue",  edit_venue_path(@venue) if current_user.admin %>
