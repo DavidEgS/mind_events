@@ -3,5 +3,5 @@
 
 <%= simple_form_for [event, event_user] do |f| %>
   <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.submit "Attend event", class: "btn btn-primary" %>
+  <%= f.submit "Attend event", class: "small-button" %>
 <% end %>
