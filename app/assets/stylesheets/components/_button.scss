@@ -14,3 +14,17 @@
  #sus .btn {
   color: white;
  }
+
+.small-button {
+  padding: 8px 40px;
+  border-radius: 15px;
+  background-color: #0F3378;
+  color: white;
+  margin-right: 20px;
+}
+
+.small-button:hover {
+  transition: all .3s ease;
+  color: white;
+  transform: scale(1.1);
+}
