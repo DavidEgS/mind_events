@@ -1,11 +1,18 @@
 <!-- app/views/venues/_form.html.erb -->
-<%= simple_form_for(venue) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address_line_one %>
-  <%= f.input :address_line_two %>
-  <%= f.input :town %>
-  <%= f.input :county %>
-  <%= f.input :postcode %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
 
+      <%= simple_form_for(venue) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address_line_one %>
+        <%= f.input :address_line_two %>
+        <%= f.input :town %>
+        <%= f.input :county %>
+        <%= f.input :postcode %>
+        <%= f.submit %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
