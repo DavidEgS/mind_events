@@ -1,0 +1,48 @@
+.index-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.pic-container {
+  width: 50%;
+}
+
+.index-img {
+  widows: 90%;
+  margin: 5px auto;
+}
+
+.event-container {
+ margin: 10px;
+ width: 50%;
+}
+
+.events-header {
+  width: 60%;
+  margin: 20px auto;
+  font-weight: bold;
+  color: $dark-blue;
+  font-size: 2em;
+}
+
+.event-instance {
+  width: 70%;
+  margin: 20px auto;
+  padding: 8px;
+  border: 3px solid rgb(94,141,231);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  min-width: 30%;
+}
+
+.link-span a {
+  height: 50%;
+  border-radius: 4px;
+  background-color: #0F3378;
+  color: white;
+  padding: 3px 8px;
+}

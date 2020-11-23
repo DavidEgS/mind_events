@@ -1,5 +1,20 @@
-<% @events.each do |event| %>
-  <%= link_to event_path(event) do %>
-    <p> <%= event.venue.name %> - <%= event.date.strftime("%H:%M %d/%B/%y") %></p>
-  <% end %>
-<% end %>
+<div class="index-container">
+  <div class="pic-container" >
+    <%= image_tag('header.jpg') %>
+  </div>
+
+  <div class="event-container">
+    <p class="events-header">Local Events</p>
+    <% @events.each do |event| %>
+        <div class="event-instance">
+          <div><i class="fas fa-futbol"></i></div>
+          <div class="content"><%= event.venue.name %></div>
+          <div class="content"><%= event.date.strftime("%A %d %B") %></div>
+          <div class="link_span"><%= link_to "See more", event_path(event) %></div>
+
+        </div>
+    <% end %>
+  </div>
+
+</div>
+

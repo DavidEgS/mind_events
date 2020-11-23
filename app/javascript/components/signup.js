@@ -1,6 +1,3 @@
-const reloadedChecks = () => {
-
-}
 
 const checkerChanger = () => {
   const dpn = document.getElementById("user_dpn");
@@ -8,11 +5,13 @@ const checkerChanger = () => {
   const userCoc = document.getElementById("user_coc");
   const pds = document.getElementById("pds");
 
+  function funclicker() {
+    console.log("test");
+  }
+
 
   if (dpn) {
-    dpn.addEventListener("click", () => {
-      cocBox.classList.toggle('closed')
-    })
+    dpn.addEventListener("click", funClicker())
   }
 
   if (userCoc) {
@@ -23,4 +22,4 @@ const checkerChanger = () => {
 }
 
 
-export { checkerChanger,  };
+export { checkerChanger };

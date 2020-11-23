@@ -32,5 +32,4 @@ import {checkerChanger} from '../components/signup.js'
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  checkerChanger();
 });

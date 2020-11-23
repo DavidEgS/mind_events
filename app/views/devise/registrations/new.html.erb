@@ -22,8 +22,8 @@
         Nam vestibulum a sapien placerat dapibus. Maecenas pulvinar ipsum urna, aliquam viverra felis lobortis eget. Aliquam hendrerit urna ultrices, placerat elit eu, vulputate ipsum. Donec gravida nibh et orci vestibulum facilisis. Vivamus a finibus purus. Curabitur volutpat dignissim erat, at lobortis neque vestibulum ac. Nullam vel lacus vitae tellus cursus aliquet eu id ante. Pellentesque scelerisque interdum aliquet. Phasellus ut enim volutpat ante tempor finibus lacinia sed orci. Vivamus dapibus sit amet enim sed ornare. Morbi id condimentum sapien, vitae molestie tortor. Donec molestie eros at ligula mattis eleifend. Duis tristique, tellus nec luctus dignissim, eros tortor sollicitudin sem, eget semper lacus sem ornare nisl. Morbi a erat erat. Phasellus sit amet quam lacus.
 
             </div>
-            <%= f.input :dpn %>
-            <div id="coc" class="closed">
+            <%= f.input :dpn, label: "I accpet the privacy terms and conditions" %>
+            <div id="coc">
               <%= f.label :coc, "Code of Conduct "%>
               <p>To attend an event you must agree to our Code of Conduct</p>
               <div class="checker">
@@ -38,9 +38,9 @@
           Nam vestibulum a sapien placerat dapibus. Maecenas pulvinar ipsum urna, aliquam viverra felis lobortis eget. Aliquam hendrerit urna ultrices, placerat elit eu, vulputate ipsum. Donec gravida nibh et orci vestibulum facilisis. Vivamus a finibus purus. Curabitur volutpat dignissim erat, at lobortis neque vestibulum ac. Nullam vel lacus vitae tellus cursus aliquet eu id ante. Pellentesque scelerisque interdum aliquet. Phasellus ut enim volutpat ante tempor finibus lacinia sed orci. Vivamus dapibus sit amet enim sed ornare. Morbi id condimentum sapien, vitae molestie tortor. Donec molestie eros at ligula mattis eleifend. Duis tristique, tellus nec luctus dignissim, eros tortor sollicitudin sem, eget semper lacus sem ornare nisl. Morbi a erat erat. Phasellus sit amet quam lacus.
 
             </div>
-              <%= f.input :coc  %>
+              <%= f.input :coc, label: "I agree to the Code of Conduct"  %>
             </div>
-            <div id="pds" class="closed">
+            <div id="pds">
               <p>Personal details</p>
               <%= f.input :email,
                           required: true,
