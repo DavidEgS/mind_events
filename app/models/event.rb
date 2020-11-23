@@ -3,6 +3,10 @@ class Event < ApplicationRecord
   has_many :event_users
   has_many :users, through: :event_users
 
+  def full?
+      event_users.count >= capacity
+  end
+
   def instance_csv
     CSV.generate do |csv|
       csv << ["Name", "Surname", "Phone Number", "Postcode"]

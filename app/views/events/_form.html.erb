@@ -1,5 +1,13 @@
-<%= simple_form_for(event) do |f| %>
-  <%= f.input :date %>
-  <%= f.input :venue_id, collection: @venue_options %>
-  <%= f.submit %>
-<% end %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+
+        <%= simple_form_for(event) do |f| %>
+          <%= f.input :date %>
+          <%= f.input :capacity %>
+          <%= f.input :venue_id, collection: @venue_options %>
+          <%= f.submit %>
+        <% end %>
+    </div>
+  </div>
+</div>

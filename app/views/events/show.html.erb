@@ -8,6 +8,8 @@
 
 <% if @event.event_users.find_by(user_id: current_user.id).present?  %>
   <p>Your are attending this event!</p>
+<% elsif @event.full? %>
+ <p>We're sorry but this event is full</p>
 <% else %>
   <%= render partial: 'event_users/form', locals: { event_user: EventUser.new, event: @event } %>
 <% end %>
