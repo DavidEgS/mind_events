@@ -2,6 +2,7 @@
 
 <div>
   <div class = "venue">
+    <%= @event.activity %>
     <%= @event.venue.name %>
   </div>
 
@@ -14,7 +15,7 @@
       <%= @event.venue.postcode %>
     </div>
     <div class = "date">
-      <%= @event.date.strftime("%A %d, %b %y") %>
+      <%= @event.date.strftime("%A %d %B %y") %>
     </div>
   </div>
   <div class = "show-image">
@@ -24,7 +25,7 @@
   </div>
 
 <% if @event.event_users.find_by(user_id: current_user.id).present?  %>
-  <p>Your are attending this event!</p>
+  <p class = "confirmed-button">Your are attending this event!</p>
 <% elsif @event.full? %>
  <p>We're sorry but this event is full</p>
 <% else %>

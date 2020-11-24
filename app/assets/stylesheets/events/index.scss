@@ -1,10 +1,15 @@
 .index-container {
   display: flex;
   min-height: 100vh;
+  padding-top: 2%;
 }
 
 .pic-container {
   width: 50%;
+}
+
+.pic-container img {
+  width: 100%;
 }
 
 .index-img {
@@ -22,7 +27,7 @@
   margin: 20px auto;
   font-weight: bold;
   color: $dark-blue;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 .event-instance {
