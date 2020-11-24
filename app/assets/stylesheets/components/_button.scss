@@ -28,3 +28,16 @@
   color: white;
   transform: scale(1.1);
 }
+
+.confirmed-button {
+  padding: 8px 40px;
+  border-radius: 15px;
+  background-color: #0F3378;
+  color: white;
+}
+
+.confirmed-button:hover {
+  transition: all .3s ease;
+  color: white;
+  transform: scale(1.1);
+}
