@@ -25,6 +25,7 @@
   padding: 10px 0px;
   font-size: 22px;
   align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 .admin-container {
@@ -33,4 +34,6 @@
   padding-bottom: 10%;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
+
