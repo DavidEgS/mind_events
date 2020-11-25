@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:index]
+  before_action :venue_options, only: [:edit, :new]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @events = policy_scope(Event)
   end
@@ -49,5 +51,9 @@ class EventsController < ApplicationController
 
   def set_event
     @event = Event.find(params[:id])
+  end
+
+  def venue_options
+    @venue_options = Venue.all.map { |v| [v.name, v.id] }
   end
 end

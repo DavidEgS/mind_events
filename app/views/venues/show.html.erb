@@ -15,6 +15,11 @@
   </p>
 
   <%= link_to "Edit this venue",  edit_venue_path(@venue) if current_user.admin %>
+  <br>
+  <%= link_to "Delete this venue",
+            venue_path(@venue),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
 
 </div>
 
