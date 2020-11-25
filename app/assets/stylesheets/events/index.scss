@@ -2,6 +2,7 @@
   display: flex;
   min-height: 100vh;
   padding-top: 2%;
+  flex-wrap: wrap;
 }
 
 .pic-container {
@@ -18,7 +19,7 @@
 }
 
 .event-container {
- margin: 0px 10px;
+ // margin: 0px 10px;
  width: 50%;
 }
 
@@ -32,12 +33,12 @@
 }
 
 .event-instance {
+  display: flex;
   width: 75%;
   margin: 5%;
   padding: 15px;
   border: 3px solid black;
   border-radius: 6px;
-  display: flex;
   justify-content: space-between;
 }
 
