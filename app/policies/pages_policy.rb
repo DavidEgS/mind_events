@@ -8,4 +8,8 @@ class PagesPolicy < ApplicationPolicy
   def home?
     true
   end
+
+  def privacy?
+    true
+  end
 end

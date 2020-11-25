@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   # pundit used for auths
   include Pundit
   # these lines give the instruction to auth with pundit on pages that aren't devise or any index page
-  after_action :verify_authorized, except: :index, unless: :devise_controller?
+  after_action :verify_authorized, except: [:index, :privacy], unless: :devise_controller?
   after_action :verify_policy_scoped, only: :index
 
   protected

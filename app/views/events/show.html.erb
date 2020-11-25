@@ -1,13 +1,15 @@
 <div class ="container">
 
-<div>
-  <div class = "venue">
-    <%= @event.activity %>
-    <br>
-    <%= @event.venue.name %>
-  </div>
 
-<div class = "time-address">
+  <div>
+    <div class = "venue">
+      <%= @event.activity %>
+      <br>
+      <%= @event.venue.name %>
+    </div>
+
+
+  <div class = "time-address">
     <div class= "address">
       <%= @event.venue.address_line_one %>
       <br>
@@ -15,26 +17,32 @@
       <br>
       <%= @event.venue.postcode %>
     </div>
-    <div class = "date">
-      <%= @event.date.strftime("%A %d %B %y") %>
+      <div class = "date">
+        <div>
+          <%= @event.date.strftime("%A %d %B %y") %>
+        </div>
+        <div>
+          Start: <%= @event.date.strftime("%R") %>
+        </div>
+      </div>
+    </div>
+
+    <div class = "show-image">
+      <%= image_tag "marketroad.jpg" %>
     </div>
   </div>
-  <div class = "show-image">
-    <%= image_tag "marketroad.jpg" %>
-  </div>
 
-  </div>
+  <% if @event.event_users.find_by(user_id: current_user.id).present?  %>
+    <p class = "confirmed-button">Your are attending this event</p>
+  <% elsif @event.full? %>
+   <p>We're sorry but this event is full</p>
+  <% else %>
+    <%= render partial: 'event_users/form', locals: { event_user: EventUser.new, event: @event } %>
+  <% end %>
 
-<% if @event.event_users.find_by(user_id: current_user.id).present?  %>
-  <p class = "confirmed-button">Your are attending this event</p>
-<% elsif @event.full? %>
- <p>We're sorry but this event is full</p>
-<% else %>
-  <%= render partial: 'event_users/form', locals: { event_user: EventUser.new, event: @event } %>
-<% end %>
-<div class = "admin-container">
-  <%= link_to "Report", report_path(@event, format: "csv") if current_user.admin   %>
-  <%= link_to "Edit this event",  edit_event_path(@event) if current_user.admin %>
-  <%= link_to "View the venue", venue_path(@event.venue) if current_user.admin %>
-</div>
+  <div class = "admin-container">
+    <div class="link-admin"> <%= link_to "Report", report_path(@event, format: "csv") if current_user.admin %></div>
+    <div class="link-admin"><%= link_to "Edit this event",  edit_event_path(@event) if current_user.admin %></div>
+    <div class="link-admin"><%= link_to "View the venue", venue_path(@event.venue) if current_user.admin %></div>
+  </div>
 </div>
