@@ -1,12 +1,21 @@
-<h1>Venues show</h1>
+<div class ="venue-show-container">
 
-<p>
-  <%= @venue.name %>
-    <%= @venue.address_line_one %><br>
-    <%= @venue.address_line_two %><br>
-    <%= @venue.town %><br>
-    <%= @venue.county %><br>
-    <%= @venue.postcode %><br>
-</p>
+<div class = "title">
+  <h1>Venue Info</h1>
+</div>
 
-<%= link_to "edit this venue",  edit_venue_path(@venue) if current_user.admin %>
+<div class = "venue-info">
+  <p>
+    <%= @venue.name %>
+      <%= @venue.address_line_one %><br>
+      <%= @venue.address_line_two %><br>
+      <%= @venue.town %><br>
+      <%= @venue.county %><br>
+      <%= @venue.postcode %><br>
+  </p>
+
+  <%= link_to "Edit this venue",  edit_venue_path(@venue) if current_user.admin %>
+
+</div>
+
+</div>

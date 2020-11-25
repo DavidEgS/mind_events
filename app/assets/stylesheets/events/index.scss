@@ -18,36 +18,37 @@
 }
 
 .event-container {
- margin: 10px;
+ margin: 0px 10px;
  width: 50%;
 }
 
 .events-header {
   width: 60%;
-  margin: 20px auto;
+  margin-left: 5%;
+  padding-bottom: 8%;
   font-weight: bold;
   color: $dark-blue;
   font-size: 2.5em;
 }
 
 .event-instance {
-  width: 70%;
-  margin: 20px auto;
-  padding: 8px;
-  border: 3px solid rgb(94,141,231);
+  width: 75%;
+  margin: 5%;
+  padding: 15px;
+  border: 3px solid black;
   border-radius: 6px;
   display: flex;
   justify-content: space-between;
+}
+
+.event-instance:hover {
+  border: 3px solid rgb(94,141,231);
 }
 
 .content {
   min-width: 30%;
 }
 
-.link-span a {
-  height: 50%;
-  border-radius: 4px;
-  background-color: #0F3378;
-  color: white;
-  padding: 3px 8px;
+.fas {
+  color: $dark-blue;
 }
