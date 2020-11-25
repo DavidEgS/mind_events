@@ -1,6 +1,5 @@
 <div class ="container">
 
-
   <div>
     <div class = "venue">
       <%= @event.activity %>
@@ -8,24 +7,23 @@
       <%= @event.venue.name %>
     </div>
 
-
-  <div class = "time-address">
-    <div class= "address">
-      <%= @event.venue.address_line_one %>
-      <br>
-      <%= @event.venue.address_line_two %>
-      <br>
-      <%= @event.venue.postcode %>
-    </div>
-      <div class = "date">
-        <div>
-          <%= @event.date.strftime("%A %d %B %y") %>
-        </div>
-        <div>
-          Start: <%= @event.date.strftime("%R") %>
+    <div class = "time-address">
+      <div class= "address">
+        <%= @event.venue.address_line_one %>
+        <br>
+        <%= @event.venue.address_line_two %>
+        <br>
+        <%= @event.venue.postcode %>
+      </div>
+        <div class = "date">
+          <div>
+            <%= @event.date.strftime("%A %d %B %y") %>
+          </div>
+          <div>
+            Start: <%= @event.date.strftime("%R") %>
+          </div>
         </div>
       </div>
-    </div>
 
     <div class = "show-image">
       <%= image_tag "marketroad.jpg" %>
