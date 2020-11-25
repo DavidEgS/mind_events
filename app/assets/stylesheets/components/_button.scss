@@ -33,11 +33,26 @@
   padding: 8px 40px;
   border-radius: 15px;
   background-color: #0F3378;
+  border: 3px solid rgb(17,51,120);
   color: white;
 }
 
 .confirmed-button:hover {
-  transition: all .3s ease;
+  border: 3px solid rgb(94,141,231);
+}
+
+
+.link-span a {
+  text-decoration: none;
+  height: 50%;
+  border-radius: 4px;
+  background-color: #0F3378;
+  color: white;
+  padding: 3px 8px;
+}
+
+.link-span:hover {
+  transition: all .1s ease;
   color: white;
   transform: scale(1.1);
 }

@@ -25,17 +25,15 @@
   </div>
 
 <% if @event.event_users.find_by(user_id: current_user.id).present?  %>
-  <p class = "confirmed-button">Your are attending this event!</p>
+  <p class = "confirmed-button">Your are attending this event</p>
 <% elsif @event.full? %>
  <p>We're sorry but this event is full</p>
 <% else %>
   <%= render partial: 'event_users/form', locals: { event_user: EventUser.new, event: @event } %>
 <% end %>
-<br>
-<%= link_to "Report", report_path(@event, format: "csv") if current_user.admin   %>
-<br>
-<%= link_to "Edit this event",  edit_event_path(@event) if current_user.admin %>
-<br>
-<%= link_to "View the venue", venue_path(@event.venue) if current_user.admin %>
-
+<div class = "admin-container">
+  <%= link_to "Report", report_path(@event, format: "csv") if current_user.admin   %>
+  <%= link_to "Edit this event",  edit_event_path(@event) if current_user.admin %>
+  <%= link_to "View the venue", venue_path(@event.venue) if current_user.admin %>
+</div>
 </div>

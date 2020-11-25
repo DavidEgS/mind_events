@@ -24,4 +24,13 @@
   justify-content: space-between;
   padding: 10px 0px;
   font-size: 22px;
+  align-items: flex-end;
+}
+
+.admin-container {
+  display: flex;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  flex-direction: row;
+  justify-content: space-between;
 }
