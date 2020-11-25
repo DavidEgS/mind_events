@@ -4,7 +4,7 @@
 
         <%= simple_form_for(event) do |f| %>
           <%= f.input :date %>
-          <%= f.input :activity %>
+          <%= f.input :activity, collection: %w@Football Art\ Therapy Cafe@ %>
           <%= f.input :capacity %>
           <%= f.input :venue_id, collection: @venue_options %>
           <%= f.submit %>
