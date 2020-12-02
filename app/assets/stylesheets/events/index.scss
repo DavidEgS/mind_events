@@ -10,7 +10,7 @@
 }
 
 .pic-container img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .index-img {
@@ -50,6 +50,18 @@
   min-width: 30%;
 }
 
+
 .fas {
   color: $dark-blue;
+}
+
+@media screen and (max-width:1200px) {
+  .container { flex-wrap: wrap; }
+  .event-container {flex-basis: 100%; }
+  .event-instance { flex-flow: column wrap; }
+  .content { padding: 1vh 0; }
+  .pic-container { width: 100%; }
+  .events-header { padding-top: 10%; }
+  .link-span {padding: 1vh 0;}
+  .link-span:hover {transform: scale(1.0)}
 }
