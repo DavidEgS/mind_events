@@ -45,14 +45,15 @@
 .link-span a {
   text-decoration: none;
   height: 50%;
-  border-radius: 4px;
+  border-radius: 3vh;
   background-color: #0F3378;
   color: white;
-  padding: 8px 10px;
+  padding: 1vh 2vh;
+  width: 5vh;
 }
 
 .link-span:hover {
   transition: all .1s ease;
   color: white;
-  transform: scale(1.1);
+  transform: none;
 }
