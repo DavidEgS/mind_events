@@ -12,4 +12,5 @@ class PagesPolicy < ApplicationPolicy
   def privacy?
     true
   end
+
 end

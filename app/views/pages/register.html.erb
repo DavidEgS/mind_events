@@ -1,0 +1,12 @@
+<%= @event.date %> <br>
+<%= @event.full? ? "full" : "spaces available" %> <br>
+<%= @event.venue.name %> <br>
+<%= @event.activity %>
+
+  <div class="register-cont" >
+    <% @event.event_users.each do |eu| %>
+      <div class="registree" >
+        <%= eu.user.name %> <%= eu.user.surname %> <%= eu.attended ? "tick" : "cross" %> space to link attendance
+      </div>
+    <% end %>
+  </div>
