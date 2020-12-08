@@ -27,7 +27,7 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import {checkerChanger} from '../components/signup.js'
+// import {checkerChanger} from '../components/signup.js'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:

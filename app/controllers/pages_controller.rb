@@ -6,4 +6,9 @@ class PagesController < ApplicationController
 
   def privacy
   end
+
+  def register
+    @event = Event.find(params[:event_id])
+    authorize @event
+  end
 end

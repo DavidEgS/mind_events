@@ -20,4 +20,8 @@ class EventPolicy < ApplicationPolicy
   def destroy?
     user.admin
   end
+
+  def register?
+    user.admin
+  end
 end
