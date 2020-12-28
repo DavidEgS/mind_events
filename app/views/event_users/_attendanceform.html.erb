@@ -1,0 +1,5 @@
+<%= form_with(model: event_user, url: event_user_path(event_user), method: "patch", remote: true ) do |form| %>
+  <%= form.check_box :attended %>
+  <%= form.submit "Mark Attended" %>
+<% end %>
+<!-- event_user_path -->

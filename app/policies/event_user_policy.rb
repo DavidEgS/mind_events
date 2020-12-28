@@ -8,4 +8,12 @@ class EventUserPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def destroy?
+    true
+  end
+
+  def update?
+    user.admin
+  end
 end
