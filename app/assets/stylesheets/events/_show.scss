@@ -1,0 +1,28 @@
+.button-wrapper {
+  width: 200px;
+}
+
+.attendance-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 24px;
+  padding: 8px;
+}
+
+.confirmed-button {
+  padding: 8px 40px;
+  border-radius: 15px;
+  background-color: #0F3378;
+  border: 3px solid rgb(17,51,120);
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}
+
+.confirmed-button a {
+  text-decoration: none;
+  color: white;
+}

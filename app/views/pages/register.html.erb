@@ -1,12 +1,17 @@
-<%= @event.date %> <br>
-<%= @event.full? ? "full" : "spaces available" %> <br>
-<%= @event.venue.name %> <br>
-<%= @event.activity %>
+<div class="legend">
+  <%= @event.activity %> @ <%= @event.venue.name %> <br>
+  On <%= @event.date.strftime("%A %d %B %y")  %> <br>
+  <%= @event.full? ? "Full" : "Spaces available" %> <br>
+
+</div>
 
   <div class="register-cont" >
     <% @event.event_users.each do |eu| %>
       <div class="registree" >
-        <%= eu.user.name %> <%= eu.user.surname %> <%= eu.attended ? "tick" : "cross" %> space to link attendance
+        NAME: <%= eu.user.name %> <%= eu.user.surname %>    |   Attended:  <%= eu.attended ? "Yes" : "No" %> <br>
+      </div>
+      <div class="attended-form">
+        <%= render "/event_users/attendanceform", event_user: eu %>
       </div>
     <% end %>
   </div>

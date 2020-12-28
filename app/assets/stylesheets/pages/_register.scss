@@ -2,8 +2,24 @@
   width: 100vw;
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
 
 .registree {
-  border-bottom: 1px solid $gray;
+  font-size: 24px;
+  width: 70%;
+}
+
+.attended-form {
+  border-bottom: 4px solid $gray;
+  width: 50%;
+  padding: 8px;
+  width: 70%;
+}
+
+.legend {
+  font-size: 24px;
+  width: 70%;
+  margin: 16px auto;
 }

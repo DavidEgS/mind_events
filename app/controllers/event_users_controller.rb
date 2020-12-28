@@ -1,4 +1,5 @@
 class EventUsersController < ApplicationController
+  before_action :set_event_user, only: [:update, :destroy]
 
   def new
     @event_user = EventUser.new
@@ -16,9 +17,24 @@ class EventUsersController < ApplicationController
     authorize @event_user
   end
 
+  def update
+    @event_user.update(eventuser_params)
+    authorize @event_user
+  end
+
+  def destroy
+    @event_user.destroy
+    redirect_to events_path
+    authorize @event_user
+  end
+
   private
 
   def eventuser_params
-    params.require(:event_user).permit(:event_id, :user_id)
+    params.require(:event_user).permit(:event_id, :user_id, :attended)
+  end
+
+  def set_event_user
+    @event_user = EventUser.find(params[:id])
   end
 end

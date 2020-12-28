@@ -8,6 +8,9 @@ class EventsController < ApplicationController
   end
 
   def show
+    if current_user && @event.event_users.find_by(user_id: current_user.id).present?
+        @event_user = EventUser.find_by(user_id: current_user.id, event_id: @event.id)
+    end
     authorize @event
   end
 
@@ -33,6 +36,11 @@ class EventsController < ApplicationController
 
   def update
     @event.update(event_params)
+    if @event.save
+      redirect_to events_path
+    else
+      render :edit
+    end
     authorize @event
   end
 
