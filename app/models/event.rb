@@ -4,7 +4,11 @@ class Event < ApplicationRecord
   has_many :users, through: :event_users
 
   def full?
-      event_users.count >= capacity
+    event_users.count >= capacity
+  end
+
+  def past?
+    Time.new + 3600 >= date
   end
 
   def instance_csv

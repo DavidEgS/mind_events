@@ -29,23 +29,26 @@
       <%= image_tag "marketroad.jpg" %>
     </div>
   </div>
-
-  <% if @event_user  %>
-    <div class="attendance-cont">
-      <div class = "text">You are attending this event</div>
-      <div class = "confirmed-button"> <%= link_to "Cancel Attendance",
-                    event_user_path(@event_user),
-                    method: :delete,
-                    data: { confirm: "Are you sure?" } %></div>
-    </div>
-  <% elsif @event.full? %>
-   <p>We're sorry but this event is fully booked</p>
-  <% elsif current_user %>
-    <div class="button-wrapper">
-      <%= render partial: 'event_users/form', locals: { event_user: EventUser.new, event: @event } %>
-    </div>
-    <% else %>
-    <%= link_to "Login to attend an event", new_user_session_path  %>
+  <% if @event.past? %>
+    <div class = "text">This event has passed</div>
+  <% else %>
+    <% if @event_user  %>
+      <div class="attendance-cont">
+        <div class = "text">You are attending this event</div>
+        <div class = "confirmed-button"> <%= link_to "Cancel Attendance",
+                      event_user_path(@event_user),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %></div>
+      </div>
+    <% elsif @event.full? %>
+     <p>We're sorry but this event is fully booked</p>
+    <% elsif current_user %>
+      <div class="button-wrapper">
+        <%= render partial: 'event_users/form', locals: { event_user: EventUser.new, event: @event } %>
+      </div>
+      <% else %>
+      <%= link_to "Login to attend an event", new_user_session_path  %>
+    <% end %>
   <% end %>
   <% if current_user && current_user.admin %>
   <div class = "admin-container">
